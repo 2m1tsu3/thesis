@@ -1,0 +1,23 @@
+{
+  "instances" :
+    [
+      {
+        "name":"ins01",
+        "networks" : [
+          {"port":"port01"},
+          {"port":"port02"}
+          ],
+        "flavor":"m1.small",
+        "key":"my_key"
+      },
+      {
+        "name":"ins02",
+        "networks" : [
+          {"port":"port03"},
+          {"port":"port04"}
+        ],
+        "flavor":"m1.small",
+        "key":"my_key"
+      }
+   ]
+}

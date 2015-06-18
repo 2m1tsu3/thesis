@@ -1,0 +1,23 @@
+description: This HOT is produced by Convert-System
+heat_template_version: '2013-05-23'
+resources:
+  ins01:
+    properties:
+      flavor: m1.small
+      image: CentOS7_Cloud-init
+      key_name: my_key
+      name: ins01
+      networks:
+      - port: port01
+      - port: port02
+    type: OS::Nova::Server
+  ins02:
+    properties:
+      flavor: m1.small
+      image: CentOS7_Cloud-init
+      key_name: my_key
+      name: ins02
+      networks:
+      - port: port03
+      - port: port04
+    type: OS::Nova::Server
