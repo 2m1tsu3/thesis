@@ -19,5 +19,13 @@
         "flavor":"m1.small",
         "key":"my_key"
       }
-   ]
+   ],
+  "networks" : 
+    [
+      {
+        "name":"net01",
+        "cidr":"192.168.101.0/24",
+        "dns":""
+      }
+    ]
 }
