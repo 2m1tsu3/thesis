@@ -22,6 +22,8 @@ for instance_data in input_data['instances']:
     instance[instance_data['name']]['properties']['flavor'] = instance_data['flavor']
     instance[instance_data['name']]['properties']['key_name'] = instance_data['key']
 
+print(instance)
+
 data_all = {}
 for data in [standard_data,resources_data]:
     data_all.update(data)
