@@ -4,8 +4,8 @@
       {
         "name":"ins01",
         "networks" : [
-          {"port":"port01"},
-          {"port":"port02"}
+          {"network":"net01"},
+          {"network":"net02"}
           ],
         "flavor":"m1.small",
         "key":"my_key"
@@ -13,8 +13,8 @@
       {
         "name":"ins02",
         "networks" : [
-          {"port":"port03"},
-          {"port":"port04"}
+          {"network":"net03"},
+          {"network":"net04"}
         ],
         "flavor":"m1.small",
         "key":"my_key"

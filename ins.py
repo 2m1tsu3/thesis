@@ -18,6 +18,7 @@ for instance_data in input_data['instances']:
     instance[instance_data['name']] = {'type': 'OS::Nova::Server','properties':{'name':'','networks':[],'flavor': '','image': 'CentOS7_Cloud-init','key_name': ''}}
     instance[instance_data['name']]['properties']['name'] = instance_data['name']
     for ins_net_data in instance_data['networks']:
+        ins_net_data['network'] = '%s_port' % ins_net_data['network']
         instance[instance_data['name']]['properties']['networks'].append(ins_net_data)
     instance[instance_data['name']]['properties']['flavor'] = instance_data['flavor']
     instance[instance_data['name']]['properties']['key_name'] = instance_data['key']
