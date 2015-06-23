@@ -3,7 +3,7 @@
 import yaml
 import json
 
-input_stream = open("input.json","r")
+input_stream = open("sample.json","r")
 output_stream = open("output.yml","w")
 input_data = json.load(input_stream)
 

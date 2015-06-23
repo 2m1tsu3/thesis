@@ -3,7 +3,7 @@
 import yaml
 import json
 
-input_stream = open("input.json","r")
+input_stream = open("sample.json","r")
 output_stream = open("output.yml","w")
 input_data = json.load(input_stream)
 
@@ -18,12 +18,12 @@ for instance_data in input_data['instances']:
     instance[instance_data['name']] = {'type': 'OS::Nova::Server','properties':{'name':'','networks':[],'flavor': '','image': 'CentOS7_Cloud-init','key_name': ''}}
     instance[instance_data['name']]['properties']['name'] = instance_data['name']
     for ins_net_data in instance_data['networks']:
-        ins_net_data['network'] = '%s_port' % ins_net_data['network']
-        instance[instance_data['name']]['properties']['networks'].append(ins_net_data)
+        ins_port_data = {'port':{'get_resource':''}}
+        ins_port_data['port']['get_resource'] = '%s_%s_port' % (instance_data['name'],ins_net_data['network'])
+        instance[instance_data['name']]['properties']['networks'].append(ins_port_data)
     instance[instance_data['name']]['properties']['flavor'] = instance_data['flavor']
     instance[instance_data['name']]['properties']['key_name'] = instance_data['key']
 
-print(instance)
 
 data_all = {}
 for data in [standard_data,resources_data]:
