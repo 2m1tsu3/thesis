@@ -1,7 +1,0 @@
-description: This HOT is produced by Convert-System
-heat_template_version: '2013-05-23'
-resources:
-  net01:
-    properties:
-      name: net01
-    type: OS::Neutron::Net
