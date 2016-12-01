@@ -1,0 +1,40 @@
+" undoファイルとbackupファイルのディレクトリ指定
+set undodir=C:\Users\m4-maruyama\var\vim\undo
+set backupdir=C:\Users\m4-maruyama\var\vim\backup
+
+
+"基本設定（後で調べる）
+set number
+set ruler
+set cmdheight=1
+set laststatus=2
+set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+set title
+set wildmenu
+set showcmd
+set hlsearch
+set list
+set listchars=tab:>\ ,extends:<
+set showmatch
+set autoindent
+set smartindent
+set hidden
+highlight LineNr ctermfg=cyan
+set cursorline
+hi clear cursorline
+hi cursorlinenr term=bold cterm=bold ctermfg=cyan ctermbg=NONE
+highlight CursorLine ctermbg=237
+
+command Tn tabnew
+
+nnoremap f <Nop>
+nnoremap fj <C-w>j
+nnoremap fk <C-w>k
+nnoremap fl <C-w>l
+nnoremap fh <C-w>h
+nnoremap fJ <C-w>J
+nnoremap fK <C-w>K
+nnoremap fL <C-w>L
+nnoremap fH <C-w>H
+nnoremap tl gt
+nnoremap th gT
